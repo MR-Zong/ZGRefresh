@@ -8,10 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+
+#import "ZGRefreshFooterView.h"
+#import "ZGRefreshHeaderView.h"
+
 @interface UITableView (ZGRefresh)
 
-@property (retain, nonatomic) UIView *refreshHeaderView;
+@property (retain, nonatomic) ZGRefreshHeaderView *refreshHeaderView;
 
-@property (retain, nonatomic) UIView *refreshFooterView;
+@property (retain, nonatomic) ZGRefreshFooterView *refreshFooterView;
 
 @end

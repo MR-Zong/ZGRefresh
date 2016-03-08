@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EFA79B3F1C8E66A700803820 /* ZGRefreshHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = EFA79B3E1C8E66A700803820 /* ZGRefreshHeaderView.m */; };
+		EFA79B421C8E66B800803820 /* ZGRefreshFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = EFA79B411C8E66B800803820 /* ZGRefreshFooterView.m */; };
 		EFC98AAD1C8D74CF00C71F14 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EFC98AAC1C8D74CF00C71F14 /* main.m */; };
 		EFC98AB01C8D74CF00C71F14 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EFC98AAF1C8D74CF00C71F14 /* AppDelegate.m */; };
 		EFC98AB31C8D74CF00C71F14 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFC98AB21C8D74CF00C71F14 /* ViewController.m */; };
@@ -37,6 +39,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EFA79B3D1C8E66A700803820 /* ZGRefreshHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGRefreshHeaderView.h; sourceTree = "<group>"; };
+		EFA79B3E1C8E66A700803820 /* ZGRefreshHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGRefreshHeaderView.m; sourceTree = "<group>"; };
+		EFA79B401C8E66B800803820 /* ZGRefreshFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGRefreshFooterView.h; sourceTree = "<group>"; };
+		EFA79B411C8E66B800803820 /* ZGRefreshFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGRefreshFooterView.m; sourceTree = "<group>"; };
 		EFC98AA81C8D74CF00C71F14 /* ZGRefresh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZGRefresh.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFC98AAC1C8D74CF00C71F14 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EFC98AAE1C8D74CF00C71F14 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -84,6 +90,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EFA79B3C1C8E669200803820 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EFA79B3D1C8E66A700803820 /* ZGRefreshHeaderView.h */,
+				EFA79B3E1C8E66A700803820 /* ZGRefreshHeaderView.m */,
+				EFA79B401C8E66B800803820 /* ZGRefreshFooterView.h */,
+				EFA79B411C8E66B800803820 /* ZGRefreshFooterView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		EFC98A9F1C8D74CE00C71F14 = {
 			isa = PBXGroup;
 			children = (
@@ -152,6 +169,7 @@
 		EFC98ADE1C8D83A900C71F14 /* ZGRefresh */ = {
 			isa = PBXGroup;
 			children = (
+				EFA79B3C1C8E669200803820 /* View */,
 				EFC98ADF1C8D83A900C71F14 /* Category */,
 			);
 			path = ZGRefresh;
@@ -296,6 +314,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFA79B3F1C8E66A700803820 /* ZGRefreshHeaderView.m in Sources */,
+				EFA79B421C8E66B800803820 /* ZGRefreshFooterView.m in Sources */,
 				EFC98AE51C8D8EC600C71F14 /* ZGTableView.m in Sources */,
 				EFC98AB31C8D74CF00C71F14 /* ViewController.m in Sources */,
 				EFC98AB01C8D74CF00C71F14 /* AppDelegate.m in Sources */,
@@ -526,6 +546,7 @@
 				EFC98AD71C8D74CF00C71F14 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EFC98AD81C8D74CF00C71F14 /* Build configuration list for PBXNativeTarget "ZGRefreshTests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +555,7 @@
 				EFC98ADA1C8D74CF00C71F14 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EFC98ADB1C8D74CF00C71F14 /* Build configuration list for PBXNativeTarget "ZGRefreshUITests" */ = {
 			isa = XCConfigurationList;
@@ -542,6 +564,7 @@
 				EFC98ADD1C8D74CF00C71F14 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -8,6 +8,8 @@
 
 #import "UITableView+ZGRefresh.h"
 #import <objc/runtime.h>
+#import "ZGRefreshFooterView.h"
+#import "ZGRefreshHeaderView.h"
 
 
 static char * const kRefreshHeaderView = "refreshHeaderView";
@@ -15,12 +17,12 @@ static char * const kRefreshFooterView = "refreshFooterView";
 
 @implementation UITableView (ZGRefresh)
 
-- (UIView *)refreshHeaderView
+- (ZGRefreshHeaderView *)refreshHeaderView
 {
     return objc_getAssociatedObject(self, kRefreshHeaderView);
 }
 
-- (void)setRefreshHeaderView:(UIView *)refreshHeaderView
+- (void)setRefreshHeaderView:(ZGRefreshHeaderView *)refreshHeaderView
 {
     refreshHeaderView.frame = CGRectMake(0, -100, self.bounds.size.width, 100);
     refreshHeaderView.backgroundColor = [UIColor redColor];
@@ -30,39 +32,31 @@ static char * const kRefreshFooterView = "refreshFooterView";
     [self addSubview:refreshHeaderView];
 }
 
-- (UIView *)refreshFooterView
+- (ZGRefreshFooterView *)refreshFooterView
 {
     return objc_getAssociatedObject(self, kRefreshFooterView);
 }
 
-- (void)setRefreshFooterView:(UIView *)refreshFooterView
+- (void)setRefreshFooterView:(ZGRefreshFooterView *)refreshFooterView
 {
     refreshFooterView.backgroundColor = [UIColor blueColor];
+    refreshFooterView.tableView = self;
     objc_setAssociatedObject(self, kRefreshFooterView, refreshFooterView, OBJC_ASSOCIATION_RETAIN);
     
     [self addSubview:refreshFooterView];
     
-//    [self addObserver:self forKeyPath:@"contentSize" options:NSKeyValueObservingOptionNew context:nil];
 }
 
-//- (void)dealloc
-//{
-//
-//    [self removeObserver:self forKeyPath:@"contentSize"];
-//}
-
-
-//- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context
-//{
-//    self.refreshFooterView.frame = CGRectMake(0, self.contentSize.height, self.bounds.size.height, 100);
-//}
 
 // 类目最好不要重写super 的方法，因为不能调用super xxx的，这样会发生很多不可预料的问题
-- (void)setContentSize:(CGSize)contentSize
-{
-    [super setContentSize:contentSize];
-     self.refreshFooterView.frame = CGRectMake(0, self.contentSize.height, self.bounds.size.height, 100);
-}
+// 其实是分类重写系统已经有的方法会，覆盖系统原来的方法实现，
+// 如果原来的方法有特别要处理的东西，那被覆盖了就没了
+// 所以分类一般都是拓展，就是增加系统原来没有的方法
+//- (void)setContentSize:(CGSize)contentSize
+//{
+//    [super setContentSize:contentSize];
+//     self.refreshFooterView.frame = CGRectMake(0, self.contentSize.height, self.bounds.size.height, 100);
+//}
 
 
 @end

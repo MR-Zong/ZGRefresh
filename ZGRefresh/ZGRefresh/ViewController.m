@@ -10,6 +10,7 @@
 #import "UITableView+ZGRefresh.h"
 #import "ZGTableView.h"
 
+
 @interface ViewController () <UITableViewDataSource>
 
 @property (weak, nonatomic) UITableView *tableView;
@@ -29,8 +30,8 @@
     tableView.dataSource = self;
     
     // 设置ZGRefresh header footer
-    tableView.refreshHeaderView = [[UIView alloc] init];
-    tableView.refreshFooterView = [[UIView alloc] init];
+    tableView.refreshHeaderView = [[ZGRefreshHeaderView alloc] init];
+    tableView.refreshFooterView = [[ZGRefreshFooterView alloc] init];
     
     [self.view addSubview:tableView];
     
