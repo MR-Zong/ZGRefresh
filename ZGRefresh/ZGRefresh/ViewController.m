@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "UITableView+ZGRefresh.h"
+#import "ZGRefresh.h"
 
 
 @interface ViewController () <UITableViewDataSource>

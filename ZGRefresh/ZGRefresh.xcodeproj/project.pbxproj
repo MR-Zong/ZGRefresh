@@ -44,6 +44,7 @@
 		EFA79B401C8E66B800803820 /* ZGRefreshFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGRefreshFooterView.h; sourceTree = "<group>"; };
 		EFA79B411C8E66B800803820 /* ZGRefreshFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGRefreshFooterView.m; sourceTree = "<group>"; };
 		EFB632361CA538ED00DD2753 /* ZGRefresh.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = ZGRefresh.gif; sourceTree = "<group>"; };
+		EFB632391CA5442300DD2753 /* ZGRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGRefresh.h; sourceTree = "<group>"; };
 		EFC98AA81C8D74CF00C71F14 /* ZGRefresh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZGRefresh.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFC98AAC1C8D74CF00C71F14 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EFC98AAE1C8D74CF00C71F14 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -98,6 +99,14 @@
 				EFA79B411C8E66B800803820 /* ZGRefreshFooterView.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		EFB632381CA5441100DD2753 /* Include */ = {
+			isa = PBXGroup;
+			children = (
+				EFB632391CA5442300DD2753 /* ZGRefresh.h */,
+			);
+			path = Include;
 			sourceTree = "<group>";
 		};
 		EFC98A9F1C8D74CE00C71F14 = {
@@ -167,6 +176,7 @@
 		EFC98ADE1C8D83A900C71F14 /* ZGRefresh */ = {
 			isa = PBXGroup;
 			children = (
+				EFB632381CA5441100DD2753 /* Include */,
 				EFA79B3C1C8E669200803820 /* View */,
 				EFC98ADF1C8D83A900C71F14 /* Category */,
 			);
