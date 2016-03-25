@@ -25,7 +25,6 @@ static char * const kRefreshFooterView = "refreshFooterView";
 - (void)setRefreshHeaderView:(ZGRefreshHeaderView *)refreshHeaderView
 {
     refreshHeaderView.frame = CGRectMake(0, -100, self.bounds.size.width, 100);
-    refreshHeaderView.backgroundColor = [UIColor redColor];
     refreshHeaderView.tableView = self;
     
     objc_setAssociatedObject(self, kRefreshHeaderView, refreshHeaderView, OBJC_ASSOCIATION_RETAIN);
@@ -40,7 +39,6 @@ static char * const kRefreshFooterView = "refreshFooterView";
 
 - (void)setRefreshFooterView:(ZGRefreshFooterView *)refreshFooterView
 {
-    refreshFooterView.backgroundColor = [UIColor blueColor];
     refreshFooterView.tableView = self;
     objc_setAssociatedObject(self, kRefreshFooterView, refreshFooterView, OBJC_ASSOCIATION_RETAIN);
     

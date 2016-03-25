@@ -10,6 +10,9 @@
 
 @interface ZGRefreshFooterView : UIView
 
++ (nullable instancetype)refreshFooterViewWithTarget:(nullable id)target action:(nullable SEL)action;
+- (nullable instancetype)initWithTarget:(nullable id)target action:(nullable SEL)action;
+
 @property (weak, nonatomic) UITableView *tableView;
 
 @end
