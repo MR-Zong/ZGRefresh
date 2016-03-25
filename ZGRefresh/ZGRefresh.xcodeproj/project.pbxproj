@@ -18,7 +18,6 @@
 		EFC98AC61C8D74CF00C71F14 /* ZGRefreshTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EFC98AC51C8D74CF00C71F14 /* ZGRefreshTests.m */; };
 		EFC98AD11C8D74CF00C71F14 /* ZGRefreshUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EFC98AD01C8D74CF00C71F14 /* ZGRefreshUITests.m */; };
 		EFC98AE21C8D83EB00C71F14 /* UITableView+ZGRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = EFC98AE11C8D83EB00C71F14 /* UITableView+ZGRefresh.m */; };
-		EFC98AE51C8D8EC600C71F14 /* ZGTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = EFC98AE41C8D8EC600C71F14 /* ZGTableView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,8 +60,6 @@
 		EFC98AD21C8D74CF00C71F14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EFC98AE01C8D83EB00C71F14 /* UITableView+ZGRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+ZGRefresh.h"; sourceTree = "<group>"; };
 		EFC98AE11C8D83EB00C71F14 /* UITableView+ZGRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+ZGRefresh.m"; sourceTree = "<group>"; };
-		EFC98AE31C8D8EC600C71F14 /* ZGTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGTableView.h; sourceTree = "<group>"; };
-		EFC98AE41C8D8EC600C71F14 /* ZGTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGTableView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,8 +139,6 @@
 			isa = PBXGroup;
 			children = (
 				EFC98AAC1C8D74CF00C71F14 /* main.m */,
-				EFC98AE31C8D8EC600C71F14 /* ZGTableView.h */,
-				EFC98AE41C8D8EC600C71F14 /* ZGTableView.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -316,7 +311,6 @@
 			files = (
 				EFA79B3F1C8E66A700803820 /* ZGRefreshHeaderView.m in Sources */,
 				EFA79B421C8E66B800803820 /* ZGRefreshFooterView.m in Sources */,
-				EFC98AE51C8D8EC600C71F14 /* ZGTableView.m in Sources */,
 				EFC98AB31C8D74CF00C71F14 /* ViewController.m in Sources */,
 				EFC98AB01C8D74CF00C71F14 /* AppDelegate.m in Sources */,
 				EFC98AE21C8D83EB00C71F14 /* UITableView+ZGRefresh.m in Sources */,

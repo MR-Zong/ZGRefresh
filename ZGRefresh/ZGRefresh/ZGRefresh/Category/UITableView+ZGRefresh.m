@@ -26,6 +26,7 @@ static char * const kRefreshFooterView = "refreshFooterView";
 {
     refreshHeaderView.frame = CGRectMake(0, -100, self.bounds.size.width, 100);
     refreshHeaderView.backgroundColor = [UIColor redColor];
+    refreshHeaderView.tableView = self;
     
     objc_setAssociatedObject(self, kRefreshHeaderView, refreshHeaderView, OBJC_ASSOCIATION_RETAIN);
     

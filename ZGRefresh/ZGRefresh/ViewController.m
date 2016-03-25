@@ -8,7 +8,6 @@
 
 #import "ViewController.h"
 #import "UITableView+ZGRefresh.h"
-#import "ZGTableView.h"
 
 
 @interface ViewController () <UITableViewDataSource>
@@ -24,7 +23,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    ZGTableView *tableView = [[ZGTableView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height) style:UITableViewStylePlain];
+    UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height) style:UITableViewStylePlain];
     self.tableView = tableView;
 
     tableView.dataSource = self;
@@ -36,6 +35,7 @@
     [self.view addSubview:tableView];
     
     [tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"testCell"];
+    
 }
 
 

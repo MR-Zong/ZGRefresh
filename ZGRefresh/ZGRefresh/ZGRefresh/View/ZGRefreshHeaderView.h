@@ -10,4 +10,9 @@
 
 @interface ZGRefreshHeaderView : UIView
 
++ (nullable instancetype)refreshHeaderViewWithTarget:(nullable id)target action:(nullable SEL)action;
+- (nullable instancetype)initWithTarget:(nullable id)target action:(nullable SEL)action;
+
+@property (weak, nonatomic) UITableView *tableView;
+
 @end
