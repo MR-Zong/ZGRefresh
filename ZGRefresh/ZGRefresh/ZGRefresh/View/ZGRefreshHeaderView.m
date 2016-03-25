@@ -129,13 +129,17 @@
         }];
         if (self.target && self.action) {
             
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored"-Warc-performSelector-leaks"
             [self.target performSelector:self.action withObject:nil];
+#pragma clang diagnostic pop
         }
         
     }else if(contentOffset.y >= 0 ){
         self.isFreshing = NO;
+        self.titleLabel.text = @"下拉可以刷新";
         [UIView animateWithDuration:0.25 animations:^{
-            self.imgView.transform = CGAffineTransformRotate(self.imgView.transform, M_PI);
+            self.imgView.transform = CGAffineTransformMakeRotation(0);
         }];
     }
 }
