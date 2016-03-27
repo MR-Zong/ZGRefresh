@@ -9,8 +9,7 @@
 #import "ZGRefreshHeaderView.h"
 
 
-@interface ZGRefreshHeaderView ()
-
+@interface ZGRefreshHeaderView () 
 @property (nonatomic, weak) id target;
 
 @property (nonatomic, assign) SEL action;
@@ -107,8 +106,22 @@
 {
     _tableView = tableView;
     
+    UIPanGestureRecognizer *pan = nil;
+    for (UIGestureRecognizer *gesture in tableView.gestureRecognizers) {
+        
+        if ([gesture isKindOfClass:[UIPanGestureRecognizer class]]) {
+            pan = (UIPanGestureRecognizer *)gesture;
+        }
+        
+    }
+    
+    [pan addObserver:self forKeyPath:@"state" options:NSKeyValueObservingOptionNew context:nil];
+    
+    
+    
     [_tableView addObserver:self forKeyPath:@"contentOffset" options:NSKeyValueObservingOptionNew context:nil];
 }
+
 - (void)dealloc
 {
     [self removeObserver:self forKeyPath:@"contentOffset"];
@@ -117,23 +130,34 @@
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context
 {
+    
+    if ([keyPath isEqualToString:@"state"]) {
+        
+        if ([change[@"new"] integerValue] == UIGestureRecognizerStateEnded) {
+//            NSLog(@"松开了手 refreshHeader");
+            if (self.tableView.contentOffset.y <= -self.bounds.size.height) {
+                if (self.target && self.action) {
+                    
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored"-Warc-performSelector-leaks"
+                    [self.target performSelector:self.action withObject:nil];
+#pragma clang diagnostic pop
+                }
+            }
+        }
+        return;
+    }
+
     NSValue *value = change[@"new"];
     CGPoint contentOffset = [value CGPointValue];
     if (self.isFreshing == NO && contentOffset.y <= -self.bounds.size.height) {
         self.isFreshing = YES;
-        NSLog(@"下拉刷新...");
+//        NSLog(@"下拉刷新...");
         self.titleLabel.text = @"松开立即刷新";
         
         [UIView animateWithDuration:0.25 animations:^{
             self.imgView.transform = CGAffineTransformRotate(self.imgView.transform, M_PI);
         }];
-        if (self.target && self.action) {
-            
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored"-Warc-performSelector-leaks"
-            [self.target performSelector:self.action withObject:nil];
-#pragma clang diagnostic pop
-        }
         
     }else if(contentOffset.y >= 0 ){
         self.isFreshing = NO;

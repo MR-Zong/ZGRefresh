@@ -101,6 +101,18 @@
 {
     _tableView = tableView;
     
+    
+    UIPanGestureRecognizer *pan = nil;
+    for (UIGestureRecognizer *gesture in tableView.gestureRecognizers) {
+        
+        if ([gesture isKindOfClass:[UIPanGestureRecognizer class]]) {
+            pan = (UIPanGestureRecognizer *)gesture;
+        }
+        
+    }
+    
+    [pan addObserver:self forKeyPath:@"state" options:NSKeyValueObservingOptionNew context:nil];
+    
     [_tableView addObserver:self forKeyPath:@"contentSize" options:NSKeyValueObservingOptionNew context:nil];
     [_tableView addObserver:self forKeyPath:@"contentOffset" options:NSKeyValueObservingOptionNew context:nil];
 }
@@ -114,6 +126,26 @@
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context
 {
+    
+    if ([keyPath isEqualToString:@"state"]) {
+        
+        if ([change[@"new"] integerValue] == UIGestureRecognizerStateEnded) {
+//            NSLog(@"松开了手 refreshFooter");
+            if (self.tableView.contentOffset.y >= (self.tableView.contentSize.height + self.bounds.size.height - [UIScreen mainScreen].bounds.size.height)) {
+//                NSLog(@"做上拉刷新。。");
+                
+                if (self.target && self.action) {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored"-Warc-performSelector-leaks"
+                    [self.target performSelector:self.action withObject:nil];
+#pragma clang diagnostic pop
+                }
+            }
+        }
+        return;
+    }
+
+    
     if ([keyPath isEqualToString:@"contentSize"]) {
         
         self.frame = CGRectMake(0, self.tableView.contentSize.height, self.tableView.bounds.size.width, 100);
@@ -124,20 +156,13 @@
     CGPoint contentOffset = [value CGPointValue];
     if (self.isFreshing == NO && contentOffset.y >= (self.tableView.contentSize.height + self.bounds.size.height - [UIScreen mainScreen].bounds.size.height)) {
         self.isFreshing = YES;
-        NSLog(@"上拉刷新...");
+//        NSLog(@"上拉刷新...");
         self.titleLabel.text = @"松开立即刷新";
         
         [UIView animateWithDuration:0.25 animations:^{
             self.imgView.transform = CGAffineTransformRotate(self.imgView.transform, M_PI);
         }];
-        
-        if (self.target && self.action) {
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored"-Warc-performSelector-leaks"
-            [self.target performSelector:self.action withObject:nil];
-#pragma clang diagnostic pop
-        }
-        
+                
     }else if(contentOffset.y <= (self.tableView.contentSize.height - [UIScreen mainScreen].bounds.size.height) ){
         self.isFreshing = NO;
         self.titleLabel.text = @"上拉可以刷新";

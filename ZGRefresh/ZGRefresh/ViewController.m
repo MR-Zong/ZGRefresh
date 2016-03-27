@@ -31,13 +31,12 @@
     // 设置ZGRefresh header footer
     tableView.refreshHeaderView = [[ZGRefreshHeaderView alloc] initWithTarget:self action:@selector(headerRefresh)];
     tableView.refreshFooterView = [[ZGRefreshFooterView alloc] initWithTarget:self action:@selector(footerRefresh)];
-    
     [self.view addSubview:tableView];
     
     [tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"testCell"];
     
-    
 }
+
 
 - (void)headerRefresh
 {
@@ -47,12 +46,6 @@
 - (void)footerRefresh
 {
     NSLog(@"从服务器获取数据 上拉");
-}
-
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-   
 }
 
 #pragma mark - UITableViewDataSource
@@ -71,9 +64,6 @@
     
     return cell;
 }
-
-
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
