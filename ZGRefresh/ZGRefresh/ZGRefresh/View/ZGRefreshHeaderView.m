@@ -70,11 +70,7 @@
     timeLabel.font = [UIFont systemFontOfSize:14];
     timeLabel.textColor = [UIColor lightGrayColor];
     timeLabel.textAlignment = NSTextAlignmentCenter;
-    
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    formatter.dateFormat = @"HH:mm";
-    NSString *timeString = [formatter stringFromDate:[[NSDate alloc] init]];
-    timeLabel.text = [NSString stringWithFormat:@"最后更新时间：%@",timeString];
+    timeLabel.text = [NSString stringWithFormat:@"最后更新时间：%@",@"00:00"];
     [labelContaimView addSubview:timeLabel];
     
     // imgView
@@ -142,6 +138,12 @@
 #pragma clang diagnostic ignored"-Warc-performSelector-leaks"
                     [self.target performSelector:self.action withObject:nil];
 #pragma clang diagnostic pop
+                    
+                    // 更新时间戳
+                    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+                    formatter.dateFormat = @"HH:mm";
+                    NSString *timeString = [formatter stringFromDate:[[NSDate alloc] init]];
+                    self.timeLabel.text = [NSString stringWithFormat:@"最后更新时间：%@",timeString];
                 }
             }
         }
@@ -150,6 +152,7 @@
 
     NSValue *value = change[@"new"];
     CGPoint contentOffset = [value CGPointValue];
+    
     if (self.isFreshing == NO && contentOffset.y <= -self.bounds.size.height) {
         self.isFreshing = YES;
 //        NSLog(@"下拉刷新...");
