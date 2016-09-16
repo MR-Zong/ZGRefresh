@@ -97,13 +97,12 @@
     self.imgView.frame = CGRectMake(self.labelContaimView.frame.origin.x - 10 - imgViewHeight, (self.bounds.size.height - imgViewHeight) / 2.0, imgViewHeight, imgViewHeight);
 }
 
-
-- (void)setTableView:(UITableView *)tableView
+- (void)setScrollView:(UIScrollView *)scrollView
 {
-    _tableView = tableView;
+    _scrollView = scrollView;
     
     UIPanGestureRecognizer *pan = nil;
-    for (UIGestureRecognizer *gesture in tableView.gestureRecognizers) {
+    for (UIGestureRecognizer *gesture in scrollView.gestureRecognizers) {
         
         if ([gesture isKindOfClass:[UIPanGestureRecognizer class]]) {
             pan = (UIPanGestureRecognizer *)gesture;
@@ -115,8 +114,9 @@
     
     
     
-    [_tableView addObserver:self forKeyPath:@"contentOffset" options:NSKeyValueObservingOptionNew context:nil];
+    [_scrollView addObserver:self forKeyPath:@"contentOffset" options:NSKeyValueObservingOptionNew context:nil];
 }
+
 
 - (void)dealloc
 {
@@ -131,7 +131,7 @@
         
         if ([change[@"new"] integerValue] == UIGestureRecognizerStateEnded) {
 //            NSLog(@"松开了手 refreshHeader");
-            if (self.tableView.contentOffset.y <= -self.bounds.size.height) {
+            if (self.scrollView.contentOffset.y <= -self.bounds.size.height) {
                 if (self.target && self.action) {
                     
 #pragma clang diagnostic push

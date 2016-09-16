@@ -93,13 +93,12 @@
     self.imgView.frame = CGRectMake(self.labelContaimView.frame.origin.x - 10 - imgViewHeight, (self.bounds.size.height - imgViewHeight) / 2.0, imgViewHeight, imgViewHeight);
 }
 
-- (void)setTableView:(UITableView *)tableView
+- (void)setScrollView:(UIScrollView *)scrollView
 {
-    _tableView = tableView;
-    
+    _scrollView = scrollView;
     
     UIPanGestureRecognizer *pan = nil;
-    for (UIGestureRecognizer *gesture in tableView.gestureRecognizers) {
+    for (UIGestureRecognizer *gesture in scrollView.gestureRecognizers) {
         
         if ([gesture isKindOfClass:[UIPanGestureRecognizer class]]) {
             pan = (UIPanGestureRecognizer *)gesture;
@@ -109,15 +108,15 @@
     
     [pan addObserver:self forKeyPath:@"state" options:NSKeyValueObservingOptionNew context:nil];
     
-    [_tableView addObserver:self forKeyPath:@"contentSize" options:NSKeyValueObservingOptionNew context:nil];
-    [_tableView addObserver:self forKeyPath:@"contentOffset" options:NSKeyValueObservingOptionNew context:nil];
+    [_scrollView addObserver:self forKeyPath:@"contentSize" options:NSKeyValueObservingOptionNew context:nil];
+    [_scrollView addObserver:self forKeyPath:@"contentOffset" options:NSKeyValueObservingOptionNew context:nil];
 }
 
 
 - (void)dealloc
 {
-    [_tableView removeObserver:self forKeyPath:@"contentSize"];
-     [_tableView removeObserver:self forKeyPath:@"contentOffset"];
+    [_scrollView removeObserver:self forKeyPath:@"contentSize"];
+     [_scrollView removeObserver:self forKeyPath:@"contentOffset"];
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context
@@ -127,7 +126,7 @@
         
         if ([change[@"new"] integerValue] == UIGestureRecognizerStateEnded) {
 //            NSLog(@"松开了手 refreshFooter");
-            if (self.tableView.contentOffset.y >= (self.tableView.contentSize.height + self.bounds.size.height - [UIScreen mainScreen].bounds.size.height)) {
+            if (self.scrollView.contentOffset.y >= (self.scrollView.contentSize.height + self.bounds.size.height - [UIScreen mainScreen].bounds.size.height)) {
 //                NSLog(@"做上拉刷新。。");
                 
                 if (self.target && self.action) {
@@ -150,13 +149,13 @@
     
     if ([keyPath isEqualToString:@"contentSize"]) {
         
-        self.frame = CGRectMake(0, self.tableView.contentSize.height, self.tableView.bounds.size.width, 100);
+        self.frame = CGRectMake(0, self.scrollView.contentSize.height, self.scrollView.bounds.size.width, 100);
         return;
     }
     
     NSValue *value = change[@"new"];
     CGPoint contentOffset = [value CGPointValue];
-    if (self.isFreshing == NO && contentOffset.y >= (self.tableView.contentSize.height + self.bounds.size.height - [UIScreen mainScreen].bounds.size.height)) {
+    if (self.isFreshing == NO && contentOffset.y >= (self.scrollView.contentSize.height + self.bounds.size.height - [UIScreen mainScreen].bounds.size.height)) {
         self.isFreshing = YES;
 //        NSLog(@"上拉刷新...");
         self.titleLabel.text = @"松开立即刷新";
@@ -165,7 +164,7 @@
             self.imgView.transform = CGAffineTransformRotate(self.imgView.transform, M_PI);
         }];
                 
-    }else if(contentOffset.y <= (self.tableView.contentSize.height - [UIScreen mainScreen].bounds.size.height) ){
+    }else if(contentOffset.y <= (self.scrollView.contentSize.height - [UIScreen mainScreen].bounds.size.height) ){
         self.isFreshing = NO;
         self.titleLabel.text = @"上拉可以刷新";
         [UIView animateWithDuration:0.25 animations:^{

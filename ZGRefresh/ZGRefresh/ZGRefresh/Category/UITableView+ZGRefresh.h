@@ -12,7 +12,7 @@
 #import "ZGRefreshFooterView.h"
 #import "ZGRefreshHeaderView.h"
 
-@interface UITableView (ZGRefresh)
+@interface UIScrollView (ZGRefresh)
 
 @property (retain, nonatomic) ZGRefreshHeaderView *refreshHeaderView;
 

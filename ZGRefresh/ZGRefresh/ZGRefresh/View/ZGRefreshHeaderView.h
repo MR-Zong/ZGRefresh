@@ -13,6 +13,6 @@
 + (nullable instancetype)refreshHeaderViewWithTarget:(nullable id)target action:(nullable SEL)action;
 - (nullable instancetype)initWithTarget:(nullable id)target action:(nullable SEL)action;
 
-@property (weak, nonatomic) UITableView *tableView;
+@property (weak, nonatomic) UIScrollView *scrollView;
 
 @end

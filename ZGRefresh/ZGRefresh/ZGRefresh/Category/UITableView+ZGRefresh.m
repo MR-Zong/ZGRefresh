@@ -15,7 +15,7 @@
 static char * const kRefreshHeaderView = "refreshHeaderView";
 static char * const kRefreshFooterView = "refreshFooterView";
 
-@implementation UITableView (ZGRefresh)
+@implementation UIScrollView (ZGRefresh)
 
 - (ZGRefreshHeaderView *)refreshHeaderView
 {
@@ -25,7 +25,7 @@ static char * const kRefreshFooterView = "refreshFooterView";
 - (void)setRefreshHeaderView:(ZGRefreshHeaderView *)refreshHeaderView
 {
     refreshHeaderView.frame = CGRectMake(0, -100, self.bounds.size.width, 100);
-    refreshHeaderView.tableView = self;
+    refreshHeaderView.scrollView = self;
     
     objc_setAssociatedObject(self, kRefreshHeaderView, refreshHeaderView, OBJC_ASSOCIATION_RETAIN);
     
@@ -39,7 +39,7 @@ static char * const kRefreshFooterView = "refreshFooterView";
 
 - (void)setRefreshFooterView:(ZGRefreshFooterView *)refreshFooterView
 {
-    refreshFooterView.tableView = self;
+    refreshFooterView.scrollView = self;
     objc_setAssociatedObject(self, kRefreshFooterView, refreshFooterView, OBJC_ASSOCIATION_RETAIN);
     
     [self addSubview:refreshFooterView];
