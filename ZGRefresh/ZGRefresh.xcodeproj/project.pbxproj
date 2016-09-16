@@ -18,7 +18,7 @@
 		EFC98ABB1C8D74CF00C71F14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFC98AB91C8D74CF00C71F14 /* LaunchScreen.storyboard */; };
 		EFC98AC61C8D74CF00C71F14 /* ZGRefreshTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EFC98AC51C8D74CF00C71F14 /* ZGRefreshTests.m */; };
 		EFC98AD11C8D74CF00C71F14 /* ZGRefreshUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EFC98AD01C8D74CF00C71F14 /* ZGRefreshUITests.m */; };
-		EFC98AE21C8D83EB00C71F14 /* UITableView+ZGRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = EFC98AE11C8D83EB00C71F14 /* UITableView+ZGRefresh.m */; };
+		EFFDEAE81D8BDDBD00EFF935 /* UIScrollView+ZGRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = EFFDEAE71D8BDDBD00EFF935 /* UIScrollView+ZGRefresh.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,8 +61,8 @@
 		EFC98ACC1C8D74CF00C71F14 /* ZGRefreshUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZGRefreshUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFC98AD01C8D74CF00C71F14 /* ZGRefreshUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZGRefreshUITests.m; sourceTree = "<group>"; };
 		EFC98AD21C8D74CF00C71F14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EFC98AE01C8D83EB00C71F14 /* UITableView+ZGRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+ZGRefresh.h"; sourceTree = "<group>"; };
-		EFC98AE11C8D83EB00C71F14 /* UITableView+ZGRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+ZGRefresh.m"; sourceTree = "<group>"; };
+		EFFDEAE61D8BDDBD00EFF935 /* UIScrollView+ZGRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+ZGRefresh.h"; sourceTree = "<group>"; };
+		EFFDEAE71D8BDDBD00EFF935 /* UIScrollView+ZGRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+ZGRefresh.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,8 +186,8 @@
 		EFC98ADF1C8D83A900C71F14 /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				EFC98AE01C8D83EB00C71F14 /* UITableView+ZGRefresh.h */,
-				EFC98AE11C8D83EB00C71F14 /* UITableView+ZGRefresh.m */,
+				EFFDEAE61D8BDDBD00EFF935 /* UIScrollView+ZGRefresh.h */,
+				EFFDEAE71D8BDDBD00EFF935 /* UIScrollView+ZGRefresh.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -327,7 +327,7 @@
 				EFA79B421C8E66B800803820 /* ZGRefreshFooterView.m in Sources */,
 				EFC98AB31C8D74CF00C71F14 /* ViewController.m in Sources */,
 				EFC98AB01C8D74CF00C71F14 /* AppDelegate.m in Sources */,
-				EFC98AE21C8D83EB00C71F14 /* UITableView+ZGRefresh.m in Sources */,
+				EFFDEAE81D8BDDBD00EFF935 /* UIScrollView+ZGRefresh.m in Sources */,
 				EFC98AAD1C8D74CF00C71F14 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

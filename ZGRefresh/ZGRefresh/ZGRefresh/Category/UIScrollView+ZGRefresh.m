@@ -6,7 +6,7 @@
 //  Copyright © 2016年 Zong. All rights reserved.
 //
 
-#import "UITableView+ZGRefresh.h"
+#import "UIScrollView+ZGRefresh.h"
 #import <objc/runtime.h>
 #import "ZGRefreshFooterView.h"
 #import "ZGRefreshHeaderView.h"

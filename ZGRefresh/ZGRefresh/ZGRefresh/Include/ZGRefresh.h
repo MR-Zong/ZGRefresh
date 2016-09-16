@@ -6,4 +6,4 @@
 //  Copyright © 2016年 Zong. All rights reserved.
 //
 
-#import "UITableView+ZGRefresh.h"
+#import "UIScrollView+ZGRefresh.h"
