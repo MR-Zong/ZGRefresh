@@ -152,10 +152,4 @@
 }
 
 
-- (void)endRefresh
-{
-    self.scrollView.contentInset = UIEdgeInsetsMake(0, self.scrollView.contentInset.left, self.scrollView.contentInset.bottom, self.scrollView.contentInset.right);
-}
-
-
 @end
