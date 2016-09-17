@@ -14,8 +14,8 @@
 
 @interface UIScrollView (ZGRefresh)
 
-@property (retain, nonatomic) ZGRefreshHeaderView *refreshHeaderView;
+@property (retain, nonatomic) ZGRefreshHeaderView *zgRefreshHeaderView;
 
-@property (retain, nonatomic) ZGRefreshFooterView *refreshFooterView;
+@property (retain, nonatomic) ZGRefreshFooterView *zgRefreshFooterView;
 
 @end

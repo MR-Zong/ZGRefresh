@@ -87,6 +87,29 @@
     return;
 }
 
+- (void)startRefresh
+{
+    self.scrollView.contentInset = UIEdgeInsetsMake(self.bounds.size.height, self.scrollView.contentInset.left, self.scrollView.contentInset.bottom, self.scrollView.contentInset.right);
+    self.scrollView.contentOffset = CGPointMake(0, 0);
+    [UIView animateWithDuration:0.25 animations:^{
+        [self.scrollView setContentOffset:CGPointMake(0, -self.bounds.size.height)];
+    } completion:^(BOOL finished) {
+        
+        
+        if (self.target && self.action) {
+            
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored"-Warc-performSelector-leaks"
+            [self.target performSelector:self.action withObject:nil];
+#pragma clang diagnostic pop
+        }
+    }];
+}
+
+- (void)endRefresh
+{
+    self.scrollView.contentInset = UIEdgeInsetsMake(0, self.scrollView.contentInset.left, self.scrollView.contentInset.bottom, self.scrollView.contentInset.right);
+}
 
 
 @end

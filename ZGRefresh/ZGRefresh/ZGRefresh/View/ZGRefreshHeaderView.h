@@ -24,4 +24,7 @@ typedef NS_ENUM(NSInteger,ZGRefreshHeaderViewStyle)
 @property (nonatomic, assign) BOOL isFreshing;
 @property (weak, nonatomic) UIScrollView *scrollView;
 
+- (void)startRefresh;
+- (void)endRefresh;
+
 @end

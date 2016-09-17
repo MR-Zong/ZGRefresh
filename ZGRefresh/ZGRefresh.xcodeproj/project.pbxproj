@@ -10,6 +10,7 @@
 		EF920F6F1D8CE7E30036CD36 /* ZGRefreshHeaderDefaultView.m in Sources */ = {isa = PBXBuildFile; fileRef = EF920F6E1D8CE7E30036CD36 /* ZGRefreshHeaderDefaultView.m */; settings = {ASSET_TAGS = (); }; };
 		EF920F721D8CE81A0036CD36 /* ZGRefreshFooterDefaultView.m in Sources */ = {isa = PBXBuildFile; fileRef = EF920F711D8CE81A0036CD36 /* ZGRefreshFooterDefaultView.m */; settings = {ASSET_TAGS = (); }; };
 		EF920F751D8CE8590036CD36 /* ZGRefreshHeaderGifView.m in Sources */ = {isa = PBXBuildFile; fileRef = EF920F741D8CE8590036CD36 /* ZGRefreshHeaderGifView.m */; settings = {ASSET_TAGS = (); }; };
+		EF920F771D8D25BC0036CD36 /* haochi.gif in Resources */ = {isa = PBXBuildFile; fileRef = EF920F761D8D25BC0036CD36 /* haochi.gif */; settings = {ASSET_TAGS = (); }; };
 		EFA79B3F1C8E66A700803820 /* ZGRefreshHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = EFA79B3E1C8E66A700803820 /* ZGRefreshHeaderView.m */; };
 		EFA79B421C8E66B800803820 /* ZGRefreshFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = EFA79B411C8E66B800803820 /* ZGRefreshFooterView.m */; };
 		EFB632371CA538ED00DD2753 /* ZGRefresh.gif in Resources */ = {isa = PBXBuildFile; fileRef = EFB632361CA538ED00DD2753 /* ZGRefresh.gif */; };
@@ -48,6 +49,7 @@
 		EF920F711D8CE81A0036CD36 /* ZGRefreshFooterDefaultView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGRefreshFooterDefaultView.m; sourceTree = "<group>"; };
 		EF920F731D8CE8590036CD36 /* ZGRefreshHeaderGifView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGRefreshHeaderGifView.h; sourceTree = "<group>"; };
 		EF920F741D8CE8590036CD36 /* ZGRefreshHeaderGifView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGRefreshHeaderGifView.m; sourceTree = "<group>"; };
+		EF920F761D8D25BC0036CD36 /* haochi.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = haochi.gif; sourceTree = "<group>"; };
 		EFA79B3D1C8E66A700803820 /* ZGRefreshHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGRefreshHeaderView.h; sourceTree = "<group>"; };
 		EFA79B3E1C8E66A700803820 /* ZGRefreshHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGRefreshHeaderView.m; sourceTree = "<group>"; };
 		EFA79B401C8E66B800803820 /* ZGRefreshFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGRefreshFooterView.h; sourceTree = "<group>"; };
@@ -108,10 +110,10 @@
 				EFA79B411C8E66B800803820 /* ZGRefreshFooterView.m */,
 				EF920F6D1D8CE7E30036CD36 /* ZGRefreshHeaderDefaultView.h */,
 				EF920F6E1D8CE7E30036CD36 /* ZGRefreshHeaderDefaultView.m */,
-				EF920F701D8CE81A0036CD36 /* ZGRefreshFooterDefaultView.h */,
-				EF920F711D8CE81A0036CD36 /* ZGRefreshFooterDefaultView.m */,
 				EF920F731D8CE8590036CD36 /* ZGRefreshHeaderGifView.h */,
 				EF920F741D8CE8590036CD36 /* ZGRefreshHeaderGifView.m */,
+				EF920F701D8CE81A0036CD36 /* ZGRefreshFooterDefaultView.h */,
+				EF920F711D8CE81A0036CD36 /* ZGRefreshFooterDefaultView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -164,6 +166,7 @@
 		EFC98AAB1C8D74CF00C71F14 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EF920F761D8D25BC0036CD36 /* haochi.gif */,
 				EFB632361CA538ED00DD2753 /* ZGRefresh.gif */,
 				EFC98AAC1C8D74CF00C71F14 /* main.m */,
 			);
@@ -312,6 +315,7 @@
 			files = (
 				EFC98ABB1C8D74CF00C71F14 /* LaunchScreen.storyboard in Resources */,
 				EFB632371CA538ED00DD2753 /* ZGRefresh.gif in Resources */,
+				EF920F771D8D25BC0036CD36 /* haochi.gif in Resources */,
 				EFC98AB81C8D74CF00C71F14 /* Assets.xcassets in Resources */,
 				EFC98AB61C8D74CF00C71F14 /* Main.storyboard in Resources */,
 			);

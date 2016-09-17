@@ -12,38 +12,41 @@
 #import "ZGRefreshHeaderView.h"
 
 
-static char * const kRefreshHeaderView = "refreshHeaderView";
-static char * const kRefreshFooterView = "refreshFooterView";
+static char * const kRefreshHeaderView = "zgRefreshHeaderView";
+static char * const kRefreshFooterView = "zgRefreshFooterView";
 
 @implementation UIScrollView (ZGRefresh)
 
-- (ZGRefreshHeaderView *)refreshHeaderView
+- (ZGRefreshHeaderView *)zgRefreshHeaderView
 {
     return objc_getAssociatedObject(self, kRefreshHeaderView);
 }
 
-- (void)setRefreshHeaderView:(ZGRefreshHeaderView *)refreshHeaderView
+
+- (void)setZgRefreshHeaderView:(ZGRefreshHeaderView *)zgRefreshHeaderView
 {
-    refreshHeaderView.frame = CGRectMake(0, -100, self.bounds.size.width, 100);
-    refreshHeaderView.scrollView = self;
+    zgRefreshHeaderView.frame = CGRectMake(0, -100, self.bounds.size.width, 100);
+    zgRefreshHeaderView.scrollView = self;
     
-    objc_setAssociatedObject(self, kRefreshHeaderView, refreshHeaderView, OBJC_ASSOCIATION_RETAIN);
+    objc_setAssociatedObject(self, kRefreshHeaderView, zgRefreshHeaderView, OBJC_ASSOCIATION_RETAIN);
     
-    [self addSubview:refreshHeaderView];
+    [self addSubview:zgRefreshHeaderView];
+
 }
 
-- (ZGRefreshFooterView *)refreshFooterView
+- (ZGRefreshFooterView *)zgRefreshFooterView
 {
     return objc_getAssociatedObject(self, kRefreshFooterView);
 }
 
-- (void)setRefreshFooterView:(ZGRefreshFooterView *)refreshFooterView
+
+- (void)setZgRefreshFooterView:(ZGRefreshFooterView *)zgRefreshFooterView
 {
-    refreshFooterView.scrollView = self;
-    objc_setAssociatedObject(self, kRefreshFooterView, refreshFooterView, OBJC_ASSOCIATION_RETAIN);
+    zgRefreshFooterView.scrollView = self;
+    objc_setAssociatedObject(self, kRefreshFooterView, zgRefreshFooterView, OBJC_ASSOCIATION_RETAIN);
     
-    [self addSubview:refreshFooterView];
-    
+    [self addSubview:zgRefreshFooterView];
+
 }
 
 

@@ -8,6 +8,33 @@
 
 #import "ZGRefreshHeaderGifView.h"
 
+@interface ZGRefreshHeaderGifView ()
+
+
+
+@end
+
 @implementation ZGRefreshHeaderGifView
+
+- (void)setupViews
+{
+
+}
+
+
+
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+    
+
+}
+
+
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context
+{
+    return;
+}
 
 @end
