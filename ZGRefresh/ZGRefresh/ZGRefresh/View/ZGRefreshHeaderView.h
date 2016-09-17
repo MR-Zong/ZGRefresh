@@ -8,11 +8,20 @@
 
 #import <UIKit/UIKit.h>
 
+typedef NS_ENUM(NSInteger,ZGRefreshHeaderViewStyle)
+{
+    ZGRefreshHeaderViewStyleDefault,
+    ZGRefreshHeaderViewStyleGif
+};
+
 @interface ZGRefreshHeaderView : UIView
 
-+ (nullable instancetype)refreshHeaderViewWithTarget:(nullable id)target action:(nullable SEL)action;
++ (nullable instancetype)refreshHeaderViewWithTarget:(nullable id)target action:(nullable SEL)action style:(ZGRefreshHeaderViewStyle)style;
 - (nullable instancetype)initWithTarget:(nullable id)target action:(nullable SEL)action;
 
+@property (nonatomic, weak) id target;
+@property (nonatomic, assign) SEL action;
+@property (nonatomic, assign) BOOL isFreshing;
 @property (weak, nonatomic) UIScrollView *scrollView;
 
 @end

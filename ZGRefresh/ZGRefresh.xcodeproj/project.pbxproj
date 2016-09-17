@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF920F6F1D8CE7E30036CD36 /* ZGRefreshHeaderDefaultView.m in Sources */ = {isa = PBXBuildFile; fileRef = EF920F6E1D8CE7E30036CD36 /* ZGRefreshHeaderDefaultView.m */; settings = {ASSET_TAGS = (); }; };
+		EF920F721D8CE81A0036CD36 /* ZGRefreshFooterDefaultView.m in Sources */ = {isa = PBXBuildFile; fileRef = EF920F711D8CE81A0036CD36 /* ZGRefreshFooterDefaultView.m */; settings = {ASSET_TAGS = (); }; };
+		EF920F751D8CE8590036CD36 /* ZGRefreshHeaderGifView.m in Sources */ = {isa = PBXBuildFile; fileRef = EF920F741D8CE8590036CD36 /* ZGRefreshHeaderGifView.m */; settings = {ASSET_TAGS = (); }; };
 		EFA79B3F1C8E66A700803820 /* ZGRefreshHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = EFA79B3E1C8E66A700803820 /* ZGRefreshHeaderView.m */; };
 		EFA79B421C8E66B800803820 /* ZGRefreshFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = EFA79B411C8E66B800803820 /* ZGRefreshFooterView.m */; };
 		EFB632371CA538ED00DD2753 /* ZGRefresh.gif in Resources */ = {isa = PBXBuildFile; fileRef = EFB632361CA538ED00DD2753 /* ZGRefresh.gif */; };
@@ -39,6 +42,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EF920F6D1D8CE7E30036CD36 /* ZGRefreshHeaderDefaultView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGRefreshHeaderDefaultView.h; sourceTree = "<group>"; };
+		EF920F6E1D8CE7E30036CD36 /* ZGRefreshHeaderDefaultView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGRefreshHeaderDefaultView.m; sourceTree = "<group>"; };
+		EF920F701D8CE81A0036CD36 /* ZGRefreshFooterDefaultView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGRefreshFooterDefaultView.h; sourceTree = "<group>"; };
+		EF920F711D8CE81A0036CD36 /* ZGRefreshFooterDefaultView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGRefreshFooterDefaultView.m; sourceTree = "<group>"; };
+		EF920F731D8CE8590036CD36 /* ZGRefreshHeaderGifView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGRefreshHeaderGifView.h; sourceTree = "<group>"; };
+		EF920F741D8CE8590036CD36 /* ZGRefreshHeaderGifView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGRefreshHeaderGifView.m; sourceTree = "<group>"; };
 		EFA79B3D1C8E66A700803820 /* ZGRefreshHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGRefreshHeaderView.h; sourceTree = "<group>"; };
 		EFA79B3E1C8E66A700803820 /* ZGRefreshHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGRefreshHeaderView.m; sourceTree = "<group>"; };
 		EFA79B401C8E66B800803820 /* ZGRefreshFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGRefreshFooterView.h; sourceTree = "<group>"; };
@@ -97,6 +106,12 @@
 				EFA79B3E1C8E66A700803820 /* ZGRefreshHeaderView.m */,
 				EFA79B401C8E66B800803820 /* ZGRefreshFooterView.h */,
 				EFA79B411C8E66B800803820 /* ZGRefreshFooterView.m */,
+				EF920F6D1D8CE7E30036CD36 /* ZGRefreshHeaderDefaultView.h */,
+				EF920F6E1D8CE7E30036CD36 /* ZGRefreshHeaderDefaultView.m */,
+				EF920F701D8CE81A0036CD36 /* ZGRefreshFooterDefaultView.h */,
+				EF920F711D8CE81A0036CD36 /* ZGRefreshFooterDefaultView.m */,
+				EF920F731D8CE8590036CD36 /* ZGRefreshHeaderGifView.h */,
+				EF920F741D8CE8590036CD36 /* ZGRefreshHeaderGifView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -326,8 +341,11 @@
 				EFA79B3F1C8E66A700803820 /* ZGRefreshHeaderView.m in Sources */,
 				EFA79B421C8E66B800803820 /* ZGRefreshFooterView.m in Sources */,
 				EFC98AB31C8D74CF00C71F14 /* ViewController.m in Sources */,
+				EF920F6F1D8CE7E30036CD36 /* ZGRefreshHeaderDefaultView.m in Sources */,
 				EFC98AB01C8D74CF00C71F14 /* AppDelegate.m in Sources */,
 				EFFDEAE81D8BDDBD00EFF935 /* UIScrollView+ZGRefresh.m in Sources */,
+				EF920F721D8CE81A0036CD36 /* ZGRefreshFooterDefaultView.m in Sources */,
+				EF920F751D8CE8590036CD36 /* ZGRefreshHeaderGifView.m in Sources */,
 				EFC98AAD1C8D74CF00C71F14 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

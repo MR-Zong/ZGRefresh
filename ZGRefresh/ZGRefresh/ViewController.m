@@ -29,8 +29,8 @@
     tableView.dataSource = self;
     
     // 设置ZGRefresh header footer
-    tableView.refreshHeaderView = [[ZGRefreshHeaderView alloc] initWithTarget:self action:@selector(headerRefresh)];
-    tableView.refreshFooterView = [[ZGRefreshFooterView alloc] initWithTarget:self action:@selector(footerRefresh)];
+    tableView.refreshHeaderView = [ZGRefreshHeaderView refreshHeaderViewWithTarget:self action:@selector(headerRefresh) style:ZGRefreshHeaderViewStyleDefault];
+    tableView.refreshFooterView = [ZGRefreshFooterView refreshFooterViewWithTarget:self action:@selector(footerRefresh)];
     [self.view addSubview:tableView];
     
     [tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"testCell"];
