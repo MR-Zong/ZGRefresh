@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EF920F6F1D8CE7E30036CD36 /* ZGRefreshHeaderDefaultView.m in Sources */ = {isa = PBXBuildFile; fileRef = EF920F6E1D8CE7E30036CD36 /* ZGRefreshHeaderDefaultView.m */; settings = {ASSET_TAGS = (); }; };
-		EF920F721D8CE81A0036CD36 /* ZGRefreshFooterDefaultView.m in Sources */ = {isa = PBXBuildFile; fileRef = EF920F711D8CE81A0036CD36 /* ZGRefreshFooterDefaultView.m */; settings = {ASSET_TAGS = (); }; };
-		EF920F751D8CE8590036CD36 /* ZGRefreshHeaderGifView.m in Sources */ = {isa = PBXBuildFile; fileRef = EF920F741D8CE8590036CD36 /* ZGRefreshHeaderGifView.m */; settings = {ASSET_TAGS = (); }; };
-		EF920F771D8D25BC0036CD36 /* haochi.gif in Resources */ = {isa = PBXBuildFile; fileRef = EF920F761D8D25BC0036CD36 /* haochi.gif */; settings = {ASSET_TAGS = (); }; };
+		EF6F0FF61D93866E008EF3D2 /* ZGRefreshGif.gif in Resources */ = {isa = PBXBuildFile; fileRef = EF6F0FF51D93866E008EF3D2 /* ZGRefreshGif.gif */; };
+		EF6F0FF81D9386FC008EF3D2 /* ZGRefreshDefault.gif in Resources */ = {isa = PBXBuildFile; fileRef = EF6F0FF71D9386FC008EF3D2 /* ZGRefreshDefault.gif */; };
+		EF920F6F1D8CE7E30036CD36 /* ZGRefreshHeaderDefaultView.m in Sources */ = {isa = PBXBuildFile; fileRef = EF920F6E1D8CE7E30036CD36 /* ZGRefreshHeaderDefaultView.m */; };
+		EF920F721D8CE81A0036CD36 /* ZGRefreshFooterDefaultView.m in Sources */ = {isa = PBXBuildFile; fileRef = EF920F711D8CE81A0036CD36 /* ZGRefreshFooterDefaultView.m */; };
+		EF920F751D8CE8590036CD36 /* ZGRefreshHeaderGifView.m in Sources */ = {isa = PBXBuildFile; fileRef = EF920F741D8CE8590036CD36 /* ZGRefreshHeaderGifView.m */; };
+		EF920F771D8D25BC0036CD36 /* haochi.gif in Resources */ = {isa = PBXBuildFile; fileRef = EF920F761D8D25BC0036CD36 /* haochi.gif */; };
 		EFA79B3F1C8E66A700803820 /* ZGRefreshHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = EFA79B3E1C8E66A700803820 /* ZGRefreshHeaderView.m */; };
 		EFA79B421C8E66B800803820 /* ZGRefreshFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = EFA79B411C8E66B800803820 /* ZGRefreshFooterView.m */; };
-		EFB632371CA538ED00DD2753 /* ZGRefresh.gif in Resources */ = {isa = PBXBuildFile; fileRef = EFB632361CA538ED00DD2753 /* ZGRefresh.gif */; };
 		EFC98AAD1C8D74CF00C71F14 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EFC98AAC1C8D74CF00C71F14 /* main.m */; };
 		EFC98AB01C8D74CF00C71F14 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EFC98AAF1C8D74CF00C71F14 /* AppDelegate.m */; };
 		EFC98AB31C8D74CF00C71F14 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFC98AB21C8D74CF00C71F14 /* ViewController.m */; };
@@ -22,7 +23,7 @@
 		EFC98ABB1C8D74CF00C71F14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFC98AB91C8D74CF00C71F14 /* LaunchScreen.storyboard */; };
 		EFC98AC61C8D74CF00C71F14 /* ZGRefreshTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EFC98AC51C8D74CF00C71F14 /* ZGRefreshTests.m */; };
 		EFC98AD11C8D74CF00C71F14 /* ZGRefreshUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EFC98AD01C8D74CF00C71F14 /* ZGRefreshUITests.m */; };
-		EFFDEAE81D8BDDBD00EFF935 /* UIScrollView+ZGRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = EFFDEAE71D8BDDBD00EFF935 /* UIScrollView+ZGRefresh.m */; settings = {ASSET_TAGS = (); }; };
+		EFFDEAE81D8BDDBD00EFF935 /* UIScrollView+ZGRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = EFFDEAE71D8BDDBD00EFF935 /* UIScrollView+ZGRefresh.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EF6F0FF51D93866E008EF3D2 /* ZGRefreshGif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = ZGRefreshGif.gif; sourceTree = "<group>"; };
+		EF6F0FF71D9386FC008EF3D2 /* ZGRefreshDefault.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = ZGRefreshDefault.gif; sourceTree = "<group>"; };
 		EF920F6D1D8CE7E30036CD36 /* ZGRefreshHeaderDefaultView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGRefreshHeaderDefaultView.h; sourceTree = "<group>"; };
 		EF920F6E1D8CE7E30036CD36 /* ZGRefreshHeaderDefaultView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGRefreshHeaderDefaultView.m; sourceTree = "<group>"; };
 		EF920F701D8CE81A0036CD36 /* ZGRefreshFooterDefaultView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGRefreshFooterDefaultView.h; sourceTree = "<group>"; };
@@ -54,7 +57,6 @@
 		EFA79B3E1C8E66A700803820 /* ZGRefreshHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGRefreshHeaderView.m; sourceTree = "<group>"; };
 		EFA79B401C8E66B800803820 /* ZGRefreshFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGRefreshFooterView.h; sourceTree = "<group>"; };
 		EFA79B411C8E66B800803820 /* ZGRefreshFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGRefreshFooterView.m; sourceTree = "<group>"; };
-		EFB632361CA538ED00DD2753 /* ZGRefresh.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = ZGRefresh.gif; sourceTree = "<group>"; };
 		EFB632391CA5442300DD2753 /* ZGRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGRefresh.h; sourceTree = "<group>"; };
 		EFC98AA81C8D74CF00C71F14 /* ZGRefresh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZGRefresh.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFC98AAC1C8D74CF00C71F14 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -167,7 +169,8 @@
 			isa = PBXGroup;
 			children = (
 				EF920F761D8D25BC0036CD36 /* haochi.gif */,
-				EFB632361CA538ED00DD2753 /* ZGRefresh.gif */,
+				EF6F0FF71D9386FC008EF3D2 /* ZGRefreshDefault.gif */,
+				EF6F0FF51D93866E008EF3D2 /* ZGRefreshGif.gif */,
 				EFC98AAC1C8D74CF00C71F14 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -314,10 +317,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				EFC98ABB1C8D74CF00C71F14 /* LaunchScreen.storyboard in Resources */,
-				EFB632371CA538ED00DD2753 /* ZGRefresh.gif in Resources */,
+				EF6F0FF61D93866E008EF3D2 /* ZGRefreshGif.gif in Resources */,
 				EF920F771D8D25BC0036CD36 /* haochi.gif in Resources */,
 				EFC98AB81C8D74CF00C71F14 /* Assets.xcassets in Resources */,
 				EFC98AB61C8D74CF00C71F14 /* Main.storyboard in Resources */,
+				EF6F0FF81D9386FC008EF3D2 /* ZGRefreshDefault.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

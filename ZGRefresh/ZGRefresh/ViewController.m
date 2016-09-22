@@ -29,7 +29,7 @@
     tableView.dataSource = self;
     
     // 设置ZGRefresh header footer
-    tableView.zgRefreshHeaderView = [ZGRefreshHeaderView refreshHeaderViewWithTarget:self action:@selector(headerRefresh) style:ZGRefreshHeaderViewStyleGif];
+    tableView.zgRefreshHeaderView = [ZGRefreshHeaderView refreshHeaderViewWithTarget:self action:@selector(headerRefresh) style:ZGRefreshHeaderViewStyleDefault];
     tableView.zgRefreshFooterView = [ZGRefreshFooterView refreshFooterViewWithTarget:self action:@selector(footerRefresh) style:ZGRefreshFooterViewStyleDefault];
     [self.view addSubview:tableView];
     
