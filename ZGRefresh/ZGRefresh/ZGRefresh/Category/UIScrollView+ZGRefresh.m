@@ -51,6 +51,7 @@ static char * const kRefreshFooterView = "zgRefreshFooterView";
 
 
 
+
 // 类目最好不要重写super 的方法，因为不能调用super xxx的，这样会发生很多不可预料的问题
 // 其实是分类重写系统已经有的方法会，覆盖系统原来的方法实现，
 // 如果原来的方法有特别要处理的东西，那被覆盖了就没了
